@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML5 Cheatsheet</title>
+    <!-- <base href="https://www.w3schools.com/" target="_blank"> -->
+    <!-- <link rel="icon" type="image/x-icon" href="html.ico"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+               table, th, td{
+                    border:1px solid black;
+                }
+                .output{
+                    border:3px solid black;
+                    width: 80%;  
+                    padding: 12px;  
+                    margin: 15px;         
+                }
+                .provinceCard {
+                    background-color: rgba(170, 29, 4, 0.849);
+                    color: rgb(17, 17, 85);
+                    border: 5px solid black;
+                    margin: 5px;
+                    padding: 5px;
+                }
+                .main{
+                    text-align: center;
+                }
+                #city{
+                    background-color: rgba(34, 8, 180, 0.849);
+                    color: rgb(15, 40, 41);
+                    border: 2px solid black;
+                    margin: 15px;
+                }
+                .main_div{
+                    display:inline-block;
+                    justify-content: center;
+               }
+                .codebox{
+                    
+                    width: 80%;
+                    display: flex; 
+                    text-align: left;
+                    position: center;
+                    padding: 10px 10px 10px; 
+                    margin: 10px;
+                    font-size: 14px; 
+                    line-height: 20px;
+                    background-color: #333;
+                    font-family: sans-serif;
+                    color: #f7f7f7b7;
+                    font-weight: bold;
+                    }
+                * {
+                    box-sizing: border-box;
+                    }
+                .row {
+                    display: flex;
+                    }
+                .column {
+                    flex: 50%;
+                    padding: 10px;
+                    height: 300px; /* Should be removed. Only for demonstration */
+                    }
+    </style>
+</head>
+<body>
+
+    <div class="main_div">
+    <b><h1 style="text-align: center">HTML5 BASICS CHEATSHEET:<br></h1><hr></b>
+
+    <!-- Intro to html -->
+    <h2 style="color:cadetblue">Introduction To HTML:</h2>
+    <center><pre class="codebox", style="position: center;">
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+
+        &lt;head&gt;
+                &lt;meta charset=""&gt;
+                &lt;meta http-equiv="" content=""&gt;
+                &lt;meta name="" content=""&gt;
+                &lt;title&gt;Document</title>
+        &lt;/head&gt;
+
+        &lt;body&gt;
+        &lt;/body&gt;
+
+        &lt;/html&gt;
+    </pre>
+    </center>
+    <p>
+        Any html document will have this syntax. First we have &lt;head&gt; tag which is basically a container for declaring elements. In other words &lt;head&gt; element is a container for metadata (data about data). Head may contain: &lt;title&gt;, &lt;style&gt;, &lt;meta&gt;, &lt;link&gt;, &lt;script&gt;, &lt;base&gt;.<br>
+        
+        <br>01.The &lt;title&gt; element defines the title of the document. The title must be text-only.
+        <br>02.The &lt;style&gt; is used to define style with html document and offers css within file.
+        <br>03.The &lt;link&gt; element defines the relationship between the current document and an external resource. It is most often used to link to external style sheets.
+        <br>04.The &lt;base&gt; element specifies the base URL and/or target for all relative URLs in a page.
+        <br>05.The &lt;body&gt; element is main area where all the work is done.
+        <br>06.The &lt;meta&gt; element is typically used to specify the character set, page description, keywords, author of the document, and viewport settings. The metadata will not be displayed on the page, but is used by browsers (how to display content or reload page), by search engines (keywords), and other web services.
+        
+        <br><br>&lt;meta&gt; Tags examples:
+        <br>a.Use "&lt;meta name="keywords" content="HTML, CSS"&gt;" to define keywords for search engines.
+        <br>b.Use "&lt;meta name="description" content="Free html tutorial"&gt;" to define a description of your web page.
+        <br>c.Use "&lt;meta name="author" content="SF"&gt;" to define the author of a page.
+        <br>d.Use "&lt;meta http-equiv="refresh" content="30"&gt;" to define duration of refresh document.
+        <br>e.Use "&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;" to define viewport to make your website look good on all devices.
+
+    </p>
+    <!-- HEADING -->
+    <hr><h2 style="color:cadetblue">HTML Heading:</h2>
+    <pre>
+        <h1>HEADING NO 1: USING &lt;h1&gt; TAG</h1>
+        <h2>HEADING NO 2: USING &lt;h2&gt; TAG</h2>
+        <h3>HEADING NO 3: USING &lt;h3&gt; TAG</h3>
+        <h4>HEADING NO 4: USING &lt;h4&gt; TAG</h4>
+        <h5>HEADING NO 5: USING &lt;h5&gt; TAG</h5>
+        <h6>HEADING NO 6: USING &lt;h6&gt; TAG</h6>
+    </pre><hr>
+    <!-- <p style="color: #081;", title="Tooltip - Displays extra info when cursor is hover over text">Used for paragraph</p> 
+        <pre style="font-size: 16px;", style="background-color: #081;">
+        Poem (maintaing text format):
+        My Bonnie lies over the ocean.
+     
+        My Bonnie lies over the sea.
+     
+        My Bonnie lies over the ocean.
+        
+        Oh, bring back my Bonnie to me.
+     </pre><hr> -->
+
+    <p>
+        <!-- LINKS -->
+        <h2 style="color:cadetblue">HTML Links:</h2>
+
+        <b>01.Absolute Links:</b><br>
+        <a href="https://www.w3schools.com/html/html_basic.asp", target="_self",>HTML Learning Material link</a><br><br>
+        <b>CODE:</b>&lt;a href=""https://www.w3schools.com", target="_self",>w3schools link&lt;/a&gt;<br>
+        Note: <br>
+            01. href refers to link associated with text. <br>
+            02. The target specifies where to open the linked document. <br> <blockquote >
+                    _self - Default. Opens the document in the same window/tab as it was clicked.<br>
+                    _blank - Opens the document in a new window or tab.<br>
+                    _parent - Opens the document in the parent frame.<br>
+                    _top - Opens the document in the full body of the window.<br></blockquote></p>
+     
+        <p><b>02.Relative Links:</b><br>
+        <a href="html_images.asp", target="_self",>w3schools link</a><br>
+        <a href="/css/default.asp", target="_self",>w3schools HTML Learning Material link</a><br><br>
+        <b>CODE:</b>&lt;a href="html_images.asp", target="_self",>w3schools link&lt;/a&gt;<br>
+        &lt;a href="/css/default.asp", target="_self",&gt;w3schools HTML Learning Material link&lt;/a&gt;<br>
+        Note: A local link (a link to a page within the same website) is specified with a relative URL (without the "https://www" part)<br></p>
+   
+        <p><b>03.Links through image:</b><br>
+        <a href="html_images.asp", target="_self",>
+            <img src="html.png", alt="HTML Logo", style="height: 50px; width: 50px;">
+        </a><br><br>
+        <b>CODE:</b> &lt;a href="html_images.asp", target="_self",&gt;<br>
+        &lt;img src="html.png", alt="HTML Logo", style="height: 50px; width: 50px;"&gt;
+        &lt;/a&gt;<br>
+        Note: To use an image as a link, just put the &lt;img&gt; tag inside the &lt;a&gt; tag<br></p>
+    
+        <p><b>04.Links through button:</b><br>
+        <button onclick="document.location='html.png'">HTML Logo</button><br><br>
+        <b>CODE:</b> &lt;button onclick="document.location='html.png'">HTML Logo&lt;/button&gt;<br>
+        Note: To use an HTML button as a link, you have to add some JavaScript code to define its characteristics.<br></p>
+    
+        <p><b>05.Boookmark of page Link:</b><br>
+
+        <a href="#Formatting Tags">Jump to Formats</a><br>
+        <a href="#Quotation Tags">Jump to Quotations</a><br><br>
+        <b>CODE: </b>&lt;a href="#Quotation Tags"&gt;Jump to Quotations&lt;/a&gt;<br>
+        Note: First create the an id field in desired area of bookmark, then add id into href field like in this example. When the link is clicked, the page will jump to location of bookmark.<br></p>
+    </p><hr>
+
+
+    <p>        
+        <!--IMAGES  -->
+        <h2 style="color:cadetblue">HTML Images:</h2>
+        
+        <p>Image tag structure: &lt;img src="Image name OR Direct Link From Web", alt="Alternate text if image is not found", style="float:Positon of Image (right or left); width:68px;height:68px;"&gt;</p><br>
+        <p><b>01.Images through website:</b><br>
+            <img src="https://www.w3schools.com/images/w3schools_green.jpg", alt="'Alternate text' if image is not found 01", width="100", height="100"></p><br>
+        
+        <p><b>02.Images through local directory:</b><br>
+            <img src="horse-gc183c5910_1280.jpg", alt="Alternate text if image is not found 02", width="300", height="230"></p><br>
+        
+        <p><b>03.GIF through local directory:</b><br>
+            <img src="programming.gif", alt="Animated gif", style="width:68px;height:68px;"></p>
+
+        <p><br>
+            <img src="programming.gif", alt="Animated gif", style="float: right;width:68px;height:68px;"></p><br><b>04.GIF Floating on sides:</b>
+    </p><hr>
+
+    <!-- FORMATTING -->
+    <h2 style="color:cadetblue", id="Formatting Tags">HTML Formatting Elements:</h2>
+    <table style="width: 100%;">
+        <tr>
+            <th>TAG:</th>
+            <th>DESCRIPTION:</th>
+            <th>EXAMPLE:</th>
+            <th>RESULT:</th>
+        </tr>
+        <tr>
+            <td>&lt;b&gt;&lt;/b&gt;</td>
+            <td>Defines bold text</td>
+            <td>&lt;b&gt;This text is bold&lt;/b&gt;</td>
+            <td><b>This text is bold</b></td>
+        </tr>
+        <tr>
+            <td>&lt;strong&gt;&lt;/strong&gt;</td>
+            <td>Defines text with strong importance</td>
+            <td>&lt;strong&gt;This text is important!&lt;/strong&gt;</td>
+            <td><strong>This text is important!</strong></td>
+        </tr>
+        <tr>
+            <td>&lt;em&gt;&lt;/em&gt;</td>
+            <td>Defines emphasized text </td>
+            <td>&lt;em&gt;This text is emphasized&lt;/em&gt;</td>
+            <td><em>This text is emphasized</em></td>
+        </tr>
+        <tr>
+            <td>&lt;i&gt;&lt;/i&gt;</td>
+            <td>Defines italic text</td>
+            <td>&lt;i&gt;This text is bold&lt;/i&gt;</td>
+            <td><i>This text is italic</i></td>
+        </tr>
+        <tr>
+            <td>&lt;small&gt;&lt;/small&gt;</td>
+            <td>Defines small text</td>
+            <td>&lt;small&gt;This text is small in font&lt;/small&gt;</td>
+            <td><small>This text is small in font</small></td>
+        </tr>
+        <tr>
+            <td>&lt;mark&gt;&lt;/mark&gt;</td>
+            <td>Defines highlighted text</td>
+            <td>&lt;p&gt;This text is &lt;mark&gt;highlighted&lt;/mark&gt; in font&lt;/p&gt;</td>
+            <td><p>Do not forget to buy <mark>milk</mark> today.</p></td>
+        </tr>
+        <tr>
+            <td>&lt;del&gt;&lt;/del&gt;</td>
+            <td>Defines that text is deleted</td>
+            <td>&lt;p&gt;This text is &lt;del&gt;deleted&lt;/del&gt; from this page&lt;/p&gt;</td>
+            <td><p>This text is <del>deleted</del> from this page</p></td>
+        </tr>
+        <tr>
+            <td>&lt;ins&gt;&lt;/ins&gt;</td>
+            <td>Defines that text is inserted</td>
+            <td>&lt;p&gt;This text is &lt;ins&gt;inserted&lt;/ins&gt; into this page&lt;/p&gt;</td>
+            <td><p>This text is <ins>inserted</ins> into this page</p></td>
+        </tr>
+        <tr>
+            <td>&lt;sub&gt;&lt;/sub&gt;</td>
+            <td>Defines subscript text. It appears half a character below <br>the normal line in a smaller font.</td>
+            <td>&lt;p&gt;Chemical Formula of water is H&lt;sub&gt;2&lt;/sub&gt;O.&lt;/p&gt;</td>
+            <td><p>Chemical Formula of water is H<sub>2</sub>0.</p></td>
+        </tr>
+        <tr>
+            <td>&lt;sup&gt;&lt;/sup&gt;</td>
+            <td>Defines superscrupt text. It appears half a character above <br>the normal line in a smaller font.</td>
+            <td>&lt;p&gt;Representation of square of 12 is 12&lt;sup&gt;2&lt;/sup&gt;.&lt;/p&gt;</td>
+            <td><p>Representation of square of 12 is 12<sup>2</sup>.</p></td>
+        </tr>
+    </table><hr>
+
+
+    <!-- QUOTATIONS -->
+    <h2 style="color:cadetblue", id="Quotation Tags">HTML Quotation:</h2>
+    <p>Following paragraph will be demonstration of usage of multiple tags like &lt;blockquote&gt;, &lt;q&gt;, &lt;abbr&gt;, &lt;address&gt; and &lt;bdo&gt;</p>
+    <p>
+        01.About Last of Us:
+        <blockquote cite="https://en.wikipedia.org/wiki/The_Last_of_Us">
+            The Last of Us is a 2013 action-adventure game developed by Naughty Dog and published by Sony Computer Entertainment. Players control Joel, a smuggler tasked with <br>
+            escorting a teenage girl, Ellie, across a post-apocalyptic United States. The Last of Us is played from a third-person perspective. Players use firearms and improvised weapons<br>
+            and can use stealth to defend against hostile humans and cannibalistic creatures infected by a mutated fungus.
+        </blockquote>
+        Note: Using &lt;blockquote&gt; to define a section that is quoted from another source. Its starts with indent.
+    </p>
+    <p>
+        02.Ezio Auditurio Quote: 
+        <q>Requiescat in pace</q><br>
+        Note: Using &lt;q&gt; to define a quote. It insert quotation marks around the quotation.
+    </p>
+    <p>
+        03.Author: 
+        This document is written by <abbr title="Shareyar Farooqui">SF</abbr>.<br>
+        Note: Using &lt;abbr&gt; to show the abbreviation/acronym of text when you mouse over the element. 
+    </p>
+    <p>
+        04.Reverse of this sentense "This line will be written from right to left" is: 
+        <bdo dir="rtl">This line will be written from right to left</bdo><br>
+        Note: Using &lt;bdo&gt; or bi-directional override to write sentense from right to left (rtl):
+    </p>
+    <p>
+        05.Displaying Address: 
+        <address>
+            Written by Shareyar Farooqui<br>
+            Visit me at: fb, insta, Snap<br>
+            www.Example.com<br>
+            03163182240<br>
+        </address><br>
+        Note: Using &lt;address&gt; to write contact information of a person or an organization.:
+    </p>
+
+    <!-- LISTS -->
+    <hr><h2 style="color:cadetblue", id="List Tags">HTML Lists:</h2>
+    <table style="width: 100%;">
+        <tr>
+            <th>TAG:</th>
+            <th>DESCRIPTION:</th>
+            <th>EXAMPLE:</th>
+            <th>RESULT:</th>
+        </tr>
+        <tr>
+            <td>&lt;ul&gt;</td>
+            <td>Defines unordered list. Use disc, square, cricle, none as list style's.</td>
+            <td>&lt;ul style="list-style-type:disc;"&gt;<br>
+                &lt;li&gt;Coffee&lt;/li&gt;<br>
+                &lt;li&gt;Tea&lt;/li&gt;<br>
+                &lt;li&gt;Milk&lt;/li&gt;<br>
+                &lt;/ul&gt;<br>
+            </td>
+           <td>
+            <ul style="list-style-type:disc;">
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+              </ul>
+           </td> 
+        </tr>
+        <tr>
+            <td>&lt;ol&gt;</td>
+            <td>Defines ordered list. Use 1, "A", "a", "I", "i", or any number from which counting will<br> start (e.g: 50) as list style's.</td>
+            <td>&lt;ol type="I"&gt;<br>
+                &lt;li&gt;Coffee&lt;/li&gt;<br>
+                &lt;li&gt;Tea&lt;/li&gt;<br>
+                &lt;li&gt;Milk&lt;/li&gt;<br>
+                &lt;/ol&gt;<br>
+            </td>
+           <td>
+            <ol type="I">
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+            </ol>
+           </td> 
+        </tr>
+        <tr>
+            <td>&lt;dl&gt;,&lt;dd&gt;,&lt;dt&gt;</td>
+            <td>Defines description list.<br>&lt;dl&gt; = defines the description list<br>&lt;dt&gt; = defines the term (name)<br>&lt;dd&gt; = describes each term</td>
+            <td>
+                &lt;dl&gt;<br>
+                    &lt;dt&gt;Coffee&lt;/dt&gt;<br>
+                    &lt;dd&gt;- black hot drink&lt;/dd&gt;<br>
+                    &lt;dt&gt;Milk&lt;/dt&gt;<br>
+                    &lt;dd&gt;- white cold drink&lt;/dd&gt;<br>
+                &lt;/dl&gt;<br>
+            </td> 
+            <td>
+                <dl>
+                    <dt>Coffee</dt>
+                    <dd>- black hot drink</dd>
+                    <dt>Milk</dt>
+                    <dd>- white cold drink</dd>
+                </dl>
+            </td> 
+        </tr>
+    </table><hr>
+
+
+    <!-- BLOCK AND INLINE ELEMENTS -->
+    <h2 style="color:cadetblue", id="Block&Inline Tags">Block & Inline Elements:</h2>
+    <p><b>01.Block Level:</b></p>
+    <p>
+        A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element.
+        A block-level element always takes up the full width available (stretches out to the left and right as far as it can).
+        <br>The &lt;p&gt; element defines a paragraph in an HTML document.
+        <br>The &lt;div&gt; element defines a division or a section in an HTML document.
+        <br>Other block Tags are: &lt;address&gt;, &lt;article&gt;, &lt;blockquote&gt;, &lt;aside&gt;, &lt;footer&gt;, &lt;section&gt;, &lt;canvas&gt;, &lt;figure&gt;, &lt;main&gt;, &lt;tfoot&gt;, &lt;noscript&gt;, &lt;nav&gt;, &lt;fieldset&gt;, &lt;figcaption&gt;, &lt;video&gt;
+    </p>
+
+    <p><b>02.Inline Level:</b></p>
+        <p>
+            An inline element does not start on a new line.An inline element only takes up as much width as necessary.
+            <br>The &lt;span&gt; element does not make any visual change by itself. span is very similar to the div tag, but div is a block-level tag and span is an inline tag.
+            <br>Other block Tags are: &lt;a&gt;, &lt;abbr&gt;, &lt;acronym&gt;, &lt;big&gt;, &lt;cite&gt;, &lt;dfn&gt;, &lt;kbd&gt;, &lt;object&gt;, &lt;samp&gt;, &lt;time&gt;, &lt;var&gt;, &lt;label&gt;, &lt;select&gt;, &lt;script&gt;, &lt;textarea&gt;
+        </p>
+    
+    <hr><h2 style="color:cadetblue", id="Class&id Tags">Class & Id Elements:</h2>
+    <p>
+        <p><b>01.Class Tag:</b></p>
+        The HTML class attribute is used to specify a class for an HTML element. Multiple HTML elements can share the same class.
+        The class attribute is often used to point to a class name in a style sheet. It can also be used by a JavaScript to access and manipulate elements with the specific class name.
+        <br>Syntax: &lt;div class="provinceCard"&gt;
+        For example:
+        <div class="provinceCard">
+            <h3>Sindh:</h3>
+            <p>Capital city: Karachi</p>
+        </div>
+        <div class="provinceCard">
+            <h3>Punjab:</h3>
+            <p>Capital city: Lahore</p>
+        </div>
+        <div class="provinceCard">
+            <h3>KPK:</h3>
+            <p>Capital city: Peshawar</p>
+        </div>
+        
+        NOTE: This example is styled with css there is nothing to do with class tag. Class tag only enabled uss to apply the css on our div element and its sub elements.
+        <br><br>This was example of div similarly we can use it for span but since its inline element, it will be displayed according to it.
+
+        <br>HTML elements can belong to more than one class. Example:
+        <h3 class="provinceCard main">Karachi</h3>
+        <h3 class="provinceCard">Lahore</h3>
+        <h3 class="provinceCard main">Peshawar</h3>
+
+        <p><b>02.ID Tag:</b></p>
+        The HTML id attribute is used to specify a unique id for an HTML element. You cannot have more than one element with the same id in an HTML document. There are others use's of ID like using it as bookmark.
+        Example: 
+        <h3 id="city">Karachi</h3>
+        <br><br>
+        Note: The id name is case sensitive! The id name must contain at least one character, cannot start with a number, and must not contain whitespaces.
+
+    </p>
+
+    <p><b>03.Difference between Class & ID Tags:</b></p>
+    <p>
+        <table>
+            <tr>
+                <th>CLASS</th>
+                <th>ID</th>
+            </tr>
+            <tr>
+                <td>The "class" assigned to an element has its name starts with "." followed by class name.</td>
+                <td>In HTML, for an element, the ID name starts with the "#" symbol followed by a unique name assigned to it.</td>
+            </tr>
+            <tr>
+                <td> Multiple class selectors can be attached to an element.</td>
+                <td>Only one ID selector can be attached to an element.</td>
+            </tr>
+            <tr>
+                <td>The class can be applied to multiple elements so it could be multiple times on a single page.</td>
+                <td>ID is unique in a page and can only apply to at most one element</td>
+            </tr>
+        </table>
+    </p>
+
+    <hr><h2 style="color:cadetblue", id="layout Tags">Layout Elements:</h2>
+    <p>
+        Websites often display content in multiple columns. HTML has several semantic elements that define the different parts of a web page.
+        <ol type="I">
+            <li>&lt;header&gt; => Defines a header for a section.</li>
+            <li>&lt;nav&gt; => Defines a set of navigation links.</li>
+            <li>&lt;section&gt; => Defines a section in a document.</li>
+            <li>&lt;article&gt; => Defines an independent content container.</li>
+            <li>&lt;aside&gt; => Defines extra content aside main content like a sidebar.</li>
+            <li>&lt;footer&gt; => Defines footer of section.</li>
+            <li>&lt;details&gt; => Defines additional details that the user can open and close on demand.</li>
+            <li>&lt;summary&gt; => Defines a heading for the &lt;details&gt; element.</li>
+        </ol>
+
+        <br>Note: These were the tags from which we can define a layout of a particular section but for displaying it in proper presentable manner we have to use layout techniques.
+        <br><ol type="i">
+            <li>CSS Framework</li>
+            <li>CSS Float Property</li>
+            <li>CSS Flexbox</li>
+            <li>CSS Grid</li>
+        </ol>
+        <br>To study them properly please <button onclick="document.location = 'https://www.w3schools.com/html/html_layout.asp'">click</button>.
+    </p>
+
+    <hr><h2 style="color:cadetblue", id="Responsive Design">Responsive Web Design:</h2>
+    <p>
+        Responsive Web Design is about using HTML and CSS to automatically resize, hide, shrink, or enlarge, a website, to make it look good 
+        on all devices (desktops, tablets, and phones).A responsive web design will automatically adjust for different screen sizes and 
+        viewports. There are serval way through which we can achieve this.
+        <blockquote>
+        <ul>
+            <li>
+                <b>Setting Viewport:</b> Adding viewport property in meta of your page will give the browser instructions on how to control the page's dimensions and scaling.
+                <br>Example: &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            </li>
+            <br><li>
+                <b>Responsive Images:</b> Responsive images are images that scale nicely to fit any browser size. Using width and max-width properties from CSS we can adjust and scale image up and down.
+                <br>Example: &lt;img src="img_girl.jpg" style="width:100%;"&gt;
+                <br><img src="horse-gc183c5910_1280.jpg" style="width:100%;" alt="Not displaying">
+                <br>Example: &lt;img src="img_girl.jpg" style="max-width:100%;height:auto;"&gt;
+                <br><img src="horse-gc183c5910_1280.jpg" style="max-width:100%;height:auto;" alt="Not displaying">
+            </li>
+            <br><li>
+                <b>Responsive Text Size:</b> The text size can be set with a "vw" unit, which means the "viewport width". That way the text size will follow the size of the browser window.
+                <br>Example: &lt;h1 style="font-size:10vw"&gt;Hello World&lt;/h1&gt;
+                <h1 style="font-size:5vw">Hello World!!!</h1>
+            </li>
+            <li>
+                <b>Responsive Designing through Bootstrap:</b> A popular CSS framework is Bootstrap. Bootstrap uses HTML, CSS and jQuery to make responsive web pages.
+                <br>To study it properly please <button onclick="document.location = 'https://www.w3schools.com/bootstrap5/index.php'">click</button>.
+            </li>
+            <br><li>
+                <b>Responsive Image:</b> The HTML &lt;picture&gt; element allows you to define different images for different browser window sizes. Resize the browser window to see how the image below changes depending on the width.<br>
+                <picture>
+                    <source srcset="horse-gc183c5910_1280.jpg" media="(max-width: 600px)">
+                    <source srcset="horses-g467e73382_640.jpg.jpg" media="(max-width: 1500px)">
+                    <source srcset="horse.jpg">
+                    <img src="horses-g467e73382_640.jpg.jpg" alt="horse">
+                </picture>
+            </li>
+            </blockquote>
+        </ul>
+    </p>
+
+    <hr><h2 style="color:cadetblue", id="forms">HTML Forms:</h2>
+    <p>An HTML form is used to collect user input. The user input is most often sent to a server for processing.</p>
+    <p>
+        <ol>
+            <li><h3>&lt;form&gt; Element:</h3> It is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.</li>
+            <li>
+                <h3>&lt;input&gt; Element:</h3> It is used to provide a field where user can enter data. There are many different ways to use the input tag.
+                <ul>
+                    <li>Input type text: &lt;input type="text"&gt; defines a single-line text input field.</li>
+                    <pre class="codebox">
+                        &lt;form&gt;
+                            &lt;label&gt;Name:&lt;/label&gt;&lt;br&gt;
+                            &lt;input type="text"&gt;&lt;br&gt;
+                        &lt;/form&gt;
+                    </pre>
+                    <div class="output">
+                        <h4>OUTPUT:</h4>
+                        <form>
+                            <label style="float: left;">First name:</label><br>
+                            <input type="text",  style="float: left;"><br>
+                        </form>
+                    </div>
+                    
+                    <li>Input type password: &lt;input type="password"&gt; defines a password input field.</li>
+                    <pre class="codebox">
+                        &lt;form&gt;
+                            &lt;label&gt;Name:&lt;/label&gt;&lt;br&gt;
+                            &lt;input type="password"&gt;&lt;br&gt;
+                        &lt;/form&gt;
+                    </pre>
+                    <div class="output">
+                        <h4>OUTPUT:</h4>
+                        <form>
+                            <label">Name:</label><br>
+                            <input type="password"><br>
+                        </form>
+                    </div>
+                    
+                    <li>Input type sumbit: &lt;input type="submit"&gt; defines a button for submitting form data to a form-handler. The form-handler is typically a server page with a script for processing input data. The form-handler is specified in the form's action attribute.</li>
+                    <pre class="codebox">
+                        &lt;form action="#forms"&gt;
+                            &lt;label&gt;Name:&lt;/label&gt;&lt;br&gt;
+                            &lt;input type="submit"&gt;
+                            &lt;input type="submit" value="submit" style="margin: 5px;"&gt;&lt;br&gt;
+                        &lt;/form&gt;
+                    </pre>
+                    <div class="output">
+                        <h4>OUTPUT:</h4>
+                        <form action="#forms">
+                            <label">Name:</label><br>
+                            <input type="text">
+                            <input type="submit" value="submit" style="margin: 5px;"><br>
+                        </form>
+                    </div>
+
+                    <li>Input type reset: &lt;input type="reset"&gt; defines a reset button that will reset all form values to their default values.</li>
+                    <pre class="codebox">
+                        &lt;form action = "#forms"&gt;
+                            &lt;label&gt;Name:&lt;/label&gt;&lt;br&gt;
+                            &lt;input type = "submit" value = "Shareyar Farooqui"&gt;
+                            &lt;input type = "submit" value = "submit" style = "margin: 5px;"&gt;&lt;br&gt;
+                            &lt;input type = "reset" value = "reset" style = "margin: 0px;"&gt;&lt;br&gt;
+                        &lt;/form&gt;
+                    </pre>
+                    <div class="output">
+                        <h4>OUTPUT:</h4>
+                        <form action="#forms">
+                            <label">Name:</label><br>
+                            <input type = "text" value = "Shareyar Farooqui">
+                            <input type = "submit" value = "submit" style = "margin: 5px;">
+                            <input type = "reset" value = "reset" style = "margin: 0px;"><br>
+                        </form>
+                    </div>
+
+                    <li>Input type radio: &lt;input type="radio"&gt; it  let a user select ONLY ONE of a limited number of choices.</li>
+                    <pre class="codebox">
+                        &lt;form action = "#forms"&gt;
+                        &lt;label">Web Language:&lt;/label&gt;&lt;br&gt;
+                        &lt;input type = "radio" value = "javaScript" name = "web lang"&gt;&lt;label&gt;JavaScript&lt;/label&gt;&lt;br&gt;
+                        &lt;input type = "radio" value = "python" name = "web lang"&gt;&lt;label&gt;Python&lt;/label&gt;&lt;br&gt;
+                        &lt;input type = "radio" value = "c-sharp" name = "web lang"&gt;&lt;label&gt;C-Sharp&lt;/label&gt;&lt;br&gt;
+                        &lt;input type = "submit" value = "submit" style = "margin: 5px;"&gt;
+                        &lt;/form&gt;
+                    </pre>
+                    <div class="output">
+                        <h4>OUTPUT:</h4>
+                        <form action="#forms">
+                            <label">Web Language:</label><br>
+                            <input type = "radio" value = "javaScript" name="web lang"><label>JavaScript</label><br>
+                            <input type = "radio" value = "python" name="web lang"><label>Python</label><br>
+                            <input type = "radio" value = "c-sharp" name="web lang"><label>C-Sharp</label><br>
+                            <input type = "submit" value = "submit" style = "margin: 5px;">
+                        </form>
+                    </div>
+
+                    <li>Input type checkbox: &lt;input type="checkbox"&gt; it let a user select ZERO or MORE options of a limited number of choices.</li>
+                    <pre class="codebox">
+                        &lt;form action = "#forms"&gt;
+                        &lt;label">Web Language:&lt;/label&gt;&lt;br&gt;
+                        &lt;input type = "checkbox" value = "javaScript" name = "lang"&gt;&lt;label&gt;JavaScript&lt;/label&gt;&lt;br&gt;
+                        &lt;input type = "checkbox" value = "python" name = "lang"&gt;&lt;label&gt;Python&lt;/label&gt;&lt;br&gt;
+                        &lt;input type = "checkbox" value = "c-sharp" name = "lang"&gt;&lt;label&gt;C-Sharp&lt;/label&gt;&lt;br&gt;
+                        &lt;input type = "submit" value = "submit" style = "margin: 5px;"&gt;
+                        &lt;/form&gt;
+                    </pre>
+                    <div class="output">
+                        <h4>OUTPUT:</h4>
+                        <form action="#forms">
+                            <label">Web Language:</label><br>
+                            <input type = "checkbox" value = "javaScript" name="lang"><label>JavaScript</label><br>
+                            <input type = "checkbox" value = "python" name="lang"><label>Python</label><br>
+                            <input type = "checkbox" value = "c-sharp" name="lang"><label>C-Sharp</label><br>
+                            <input type = "submit" value = "submit" style = "margin: 5px;">
+                        </form>
+                    </div>
+
+                    <li>Input type button: &lt;input type="button"&gt; .</li>
+                    <pre class="codebox">
+                        &lt;form action = "#forms"&gt;
+                        &lt;label">See Message:&lt;/label&gt;
+                        &lt;input type = "button" value = "Click Me!!!" name="click", onclick="alert('hello there!')&gt;&lt;label&gt;&lt;/label&gt;&lt;br&gt;
+                        &lt;/form&gt;
+                    </pre>
+                    <div class="output">
+                        <h4>OUTPUT:</h4>
+                        <form action="#forms">
+                            <label">See Message:</label>
+                            <input type = "button" value = "Click Me!!!" name = "click", onclick = "alert('hello there!')"><label></label><br>
+                        </form>
+                    </div>
+
+                    <li>Input type color: &lt;input type="color"&gt; it let a user select color.</li>
+                    <pre class="codebox">
+                        &lt;form action = "#forms"&gt;
+                        &lt;label">Select your favourite color:&lt;/label&gt;&lt;br&gt;
+                        &lt;input type = "color" value = "Color"&gt;&lt;br&gt;
+                        &lt;input type = "submit" value = "submit" style = "margin: 5px;"&gt;
+                        &lt;/form&gt;
+                    </pre>
+                    <div class="output">
+                        <h4>OUTPUT:</h4>
+                        <form action="#forms">
+                            <label">Select your favourite color:</label>
+                            <input type = "color" value = "Color"><br>
+                            <input type = "submit" value = "submit" style = "margin: 5px;">
+                        </form>
+                    </div>
+
+                    <li>Input type Date: &lt;input type="date"&gt; it let a user select date. You can also use the min and max attributes to add restrictions to dates.</li>
+                    <pre class="codebox">
+                        &lt;form action = "#forms"&gt;
+                        &lt;label">Select your current date:&lt;/label&gt;&lt;br&gt;
+                        &lt;input type = "date" value = "Date" min = "2001-10-31" max = "2101-10-31"&gt;&lt;br&gt;
+                        &lt;input type = "submit" value = "submit" style = "margin: 5px;"&gt;
+                        &lt;/form&gt;
+                    </pre>
+                    <div class="output">
+                        <h4>OUTPUT:</h4>
+                        <form action="#forms">
+                            <label">Select your current date:</label>
+                            <input type = "date" value = "Date" min = "2001-10-31" max="2101-10-31"><br>
+                            <input type = "submit" value = "submit" style = "margin: 5px;">
+                        </form>
+                    </div>
+
+                    <li>Input type Datetime-local: &lt;input type="Datetime-local"&gt; it let a user select date and time. You can also use the min and max attributes to add restrictions to dates.</li>
+                    <pre class="codebox">
+                        &lt;form action = "#forms"&gt;
+                        &lt;label">Select your current date and time:&lt;/label&gt;
+                        &lt;input type = "Datetime-local" value = "Date"&gt;&lt;br&gt;
+                        &lt;input type = "submit" value = "submit" style = "margin: 5px;"&gt;
+                        &lt;/form&gt;
+                    </pre>
+                    <div class="output">
+                        <h4>OUTPUT:</h4>
+                        <form action="#forms">
+                            <label">Select your current date and time:</label>
+                            <input type = "Datetime-local" value = "Date"><br>
+                            <input type = "submit" value = "submit" style = "margin: 5px;">
+                        </form>
+                    </div>
+
+                    <li>Input type email: &lt;input type="email"&gt; is used for input fields that should contain an e-mail address. Depending on browser support, the e-mail address can be automatically validated when submitted.</li>
+                    <pre class="codebox">
+                        &lt;form action = "#forms"&gt;
+                        &lt;label">Enter your email:&lt;/label&gt;
+                        &lt;input type = "email" value = "Email"&gt;
+                        &lt;input type = "submit" value = "submit" style = "margin: 5px;"&gt;
+                        &lt;/form&gt;
+                    </pre>
+                    <div class="output">
+                        <h4>OUTPUT:</h4>
+                        <form action="#forms">
+                            <label">Enter your email:</label>
+                            <input type = "email" value = "Email">
+                            <input type = "submit" value = "submit" style = "margin: 5px;">
+                        </form>
+                    </div>
+
+                    <li>Input type file: &lt;input type="file"&gt; defines a file-select field and a "Browse" button for file uploads.</li>
+                    <pre class="codebox">
+                        &lt;form action = "#forms"&gt;
+                        &lt;label">Select File:&lt;/label&gt;
+                        &lt;input type = "file" value = "File"&gt;
+                        &lt;input type = "submit" value = "submit" style = "margin: 5px;"&gt;
+                        &lt;/form&gt;
+                    </pre>
+                    <div class="output">
+                        <h4>OUTPUT:</h4>
+                        <form action="#forms">
+                            <label">Select File:</label>
+                            <input type = "file" value = "File">
+                            <input type = "submit" value = "submit" style = "margin: 5px;">
+                        </form>
+                    </div>
+
+                    <li>Input type number: &lt;input type="number"&gt; defines a numeric input field. The following example displays a numeric input field, where you can enter a value from 1 to 5.</li>
+                    <pre class="codebox">
+                        &lt;form action = "#forms"&gt;
+                        &lt;label">Enter your number:&lt;/label&gt;
+                        &lt;input type = "number" value = "num" max="10" min="2"&gt;
+                        &lt;input type = "submit" value = "submit" style = "margin: 5px;"&gt;
+                        &lt;/form&gt;
+                    </pre>
+                    <div class="output">
+                        <h4>OUTPUT:</h4>
+                        <form action="#forms">
+                            <label">Enter your number:</label>
+                            <input type = "number" value = "num" max="10" min="2">
+                            <input type = "submit" value = "submit" style = "margin: 5px;">
+                        </form>
+                    </div>
+
+                    <li>Input type range: &lt;input type="range"&gt; defines a control for entering a number whose exact value is not important (like a slider control). Default range is 0 to 100. However, you can set restrictions on what numbers are accepted with the min, max, and step attributes.</li>
+                    <pre class="codebox">
+                        &lt;form action = "#forms"&gt;
+                        &lt;label">Volumn:&lt;/label&gt;
+                        &lt;input type = "vol" value = "vol" max="10" min="2" step="10" oninput="this.nextElementSibling.value = this.value"&gt;
+                        &lt;output&gt;&lt;/output&gt;&gt;
+                        &lt;/form&gt;
+                    </pre>
+                    <div class="output">
+                        <h4>OUTPUT:</h4>
+                        <form action="#forms">
+                            <label">Volumn:</label>
+                            <input type = "range" value = "vol" max="100" min="0" step="10" oninput="this.nextElementSibling.value = this.value"><output></output>
+                        </form>
+                    </div>
+
+                    <li>Input type tel: &lt;input type="tel"&gt; it is used for input fields that should contain a telephone number.</li>
+                    <pre class="codebox">
+                        &lt;form action = "#forms"&gt;
+                        &lt;label">Enter your phone number:&lt;/label&gt;
+                        &lt;input type = "tel" placeholder="0316-1004325" pattern="[0]{1}[1-9]{3}-[0-9]{7}" required"&gt;
+                        &lt;input type = "submit" value = "submit" style = "margin: 5px;"&gt;
+                        &lt;/form&gt;
+                    </pre>
+                    <div class="output">
+                        <h4>OUTPUT:</h4>
+                        <form action="#forms">
+                            <label">Enter your phone number:</label>
+                            <input type = "tel" placeholder="0316-1004325" pattern="[0]{1}[1-9]{3}-[0-9]{7}" required>
+                            <input type = "submit" value = "submit" style = "margin: 5px;">
+                        </form>
+                    </div>
+
+                    <li>Input type time: &lt;input type="time"&gt; it allows the user to select a time (no time zone).</li>
+                    <pre class="codebox">
+                        &lt;form action = "#forms"&gt;
+                        &lt;label">Enter your phone number:&lt;/label&gt;
+                        &lt;input type = "time" value="Time"&gt;
+                        &lt;input type = "submit" value = "submit" style = "margin: 5px;"&gt;
+                        &lt;/form&gt;
+                    </pre>
+                    <div class="output">
+                        <h4>OUTPUT:</h4>
+                        <form action="#forms">
+                            <label">Enter your phone number:</label>
+                            <input type = "time" value="Time">
+                            <input type = "submit" value = "submit" style = "margin: 5px;">
+                        </form>
+                    </div>
+
+                    <li>Input type url: &lt;input type="url"&gt; is used for input fields that should contain a URL address. Depending on browser support, the url field can be automatically validated when submitted.</li>
+                    <pre class="codebox">
+                        &lt;form action = "#forms"&gt;
+                        &lt;label">Enter web page:&lt;/label&gt;
+                        &lt;input type = "url" placeholder="URL"&gt;
+                        &lt;input type = "submit" value = "submit" style = "margin: 5px;"&gt;
+                        &lt;/form&gt;
+                    </pre>
+                    <div class="output">
+                        <h4>OUTPUT:</h4>
+                        <form action="#forms">
+                            <label">Enter web page:</label>
+                            <input type = "url" placeholder="URL">
+                            <input type = "submit" value = "submit" style = "margin: 5px;">
+                        </form>
+                    </div>
+
+                    <li>Input type list: &lt;input type="list"&gt; refers to a &lt;datalist&gt; element that contains pre-defined options for an &lt;input&gt; element.</li>
+                    <pre class="codebox">
+                        &lt;form action = "#forms"&gt;
+                        &lt;label">Browers&lt;/label&gt;
+                                &lt;input list = "browers"&gt;
+                                &lt;datalist id = "browers"&gt;
+                                        &lt;option value = "Chrome"&gt;
+                                        &lt;option value = "Safari"&gt;
+                                        &lt;option value = "Opera"&gt;
+                                &lt;/datalist&gt;
+                        &lt;/form&gt;
+                    </pre>
+                    <div class="output">
+                        <h4>OUTPUT:</h4>
+                        <form action="#forms">
+                            <label">Browers:</label>
+                            <input list = "browers">
+                            <datalist id="browers">
+                            <option value="Chrome">
+                            <option value="Opera">
+                            <option value="Safari">
+                        </datalist>
+                        </form>
+                    </div>
+                </ul>
+            </li>
+
+
+            <li>
+                <h3>&lt;input&gt; Element Attributes:</h3> It is used to specifies that an input field must be filled out in particular way before submitting the form.
+                <table>
+                    <tr>
+                        <th>ATTRIBUTES:</th>
+                        <th>DESCRIPTION:</th>
+                        <th>EXAMPLE:</th>
+                        <th>RESULT:</th>
+                    </tr>   
+                    <tr>
+                        <td>Value:</td>
+                        <td>The input value attribute specifies an initial value for an input field.</td>
+                        <td>value=example</td>
+                        <td><label>Text: </label><input type="text" value="example"></td>
+                    </tr>
+                    <tr>
+                        <td>Readonly:</td>
+                        <td>The input readonly attribute specifies that an input field is read-only. A read-only input field cannot be modified (however, a user can tab to it, highlight it, and copy the text from it).</td>
+                        <td>readonly</td>
+                        <td><label>Text: </label><input type="text" value="example" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>Step:</td>
+                        <td>The input step attribute specifies the legal number intervals for an input field. Example: if step="3", legal numbers could be -3, 0, 3, 6, etc.</td>
+                        <td>step="3"</td>
+                        <td><label>Range: </label><input type="number" value="example" step="3"></td>
+                    </tr>
+                    <tr>
+                        <td>Disabled:</td>
+                        <td>The input disabled attribute specifies that an input field should be disabled. A disabled input field is unusable and un-clickable.</td>
+                        <td>disabled</td>
+                        <td><label>Text: </label><input type="text" value="example" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Length:</td>
+                        <td>The input maxlength attribute specifies the maximum number of characters allowed in an input field.</td>
+                        <td>maxlength = "5"</td>
+                        <td><label>Text: </label><input type="text" value="10110" maxlength="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Max and Min:</td>
+                        <td>The input min and max attributes specify the minimum and maximum values for an input field. The min and max attributes work with the following input types: number, range, date, datetime-local, month, time and week.</td>
+                        <td>max="2030-12-31" and min="1979-12-31"</td>
+                        <td><label>Date: </label><input type="date" max="2030-12-31" min="1979-12-31"></td>
+                    </tr>
+                    <tr>
+                        <td>Multiple:</td>
+                        <td>The input multiple attribute specifies that the user is allowed to enter more than one value in an input field. The multiple attribute works with the following input types: email, and file.</td>
+                        <td>multiple</td>
+                        <td><label>Files:</label><input type="file" multiple></td>
+                    </tr>
+                    <tr>
+                        <td>Pattern:</td>
+                        <td>The input pattern attribute specifies a regular expression that the input field's value is checked against, when the form is submitted. The pattern attribute works with the following input types: text, date, search, url, tel, email, and password.</td>
+                        <td>pattern="[A-Za-z]{3}" or pattern=[0]{1}[1-9]{3}-[0-9]{7}</td>
+                        <td><form><label">Number:</label>
+                            <input type = "number" pattern="[0]{1}[1-9]{3}-[0-9]{7}">
+                            <input type = "submit" value = "submit" style = "margin: 5px;"></form></td>
+                    </tr>
+                    <tr>
+                        <td>Placeholder:</td>
+                        <td>The input placeholder attribute specifies a short hint that describes the expected value of an input field (a sample value or a short description of the expected format).</td>
+                        <td>placeholder="example"</td>
+                        <td><form><label">Text:</label><input type = "Text" placeholder= "example"></form></td>
+                    </tr>
+                    <tr>
+                        <td>Required:</td>
+                        <td>The input required attribute specifies that an input field must be filled out before submitting the form.</td>
+       
+                        <td>required</td>
+                        <td><form><label">Text:</label><input type = "Text" required>
+                            <input type = "submit" value = "submit" style = "margin: 5px;"></form></td>
+
+                    </tr>
+                </table>
+            </li>
+        </ol>
+    </p>
+    <hr><h2 style="color:cadetblue", id="linkpages">Link HTML Pages:</h2>
+    
+    <form action="nxtpg.html">
+        <label>Click on button to goto next page:</label>
+        <input type = "button" value = "Click Me!!!" name="click", onclick="window.location.href='nxtpg.html'">
+    </form>
+    <pre class="codebox" style="position:relative;">
+        &lt;form action="nxtpg.html"&gt;
+            &lt;label">Click on button to goto next page:&lt;/label&gt;
+            &lt;input type = "button" value = "Click Me!!!" name="click", onclick="window.location.href='nxtpg.html'"&gt;
+        &lt;/form&gt;
+    </pre>
+</div>
+</body>
+</html>
+
